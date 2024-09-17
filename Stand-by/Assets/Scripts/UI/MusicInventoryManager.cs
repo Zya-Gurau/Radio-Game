@@ -29,13 +29,13 @@ public class MusicInventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItem(String itemName, Sprite itemSprite)
+    public void AddItem(MusicItem item)
     {
         for (int i = 0; i < musicItemSlots.Length; i++)
         {
             if (!musicItemSlots[i].isFull)
             {
-                musicItemSlots[i].AddItem(itemName, itemSprite);
+                musicItemSlots[i].AddItem(item);
                 return;
             }
         }

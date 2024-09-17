@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 9171303154932017301}
   - component: {fileID: 2816334613871716654}
   - component: {fileID: 2587507117847873579}
+  - component: {fileID: 5939873640460011291}
+  - component: {fileID: 5395450377928476056}
   m_Layer: 5
   m_Name: MusicInventorySlotImage
   m_TagString: Untagged
@@ -75,6 +77,38 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5939873640460011291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655468080510795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff77fa963a30eb4383dc4edad1fb1d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5395450377928476056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655468080510795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 1
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!1 &1767529917286010144
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,6 +121,7 @@ GameObject:
   - component: {fileID: 807614998553733508}
   - component: {fileID: 9147895647366882824}
   - component: {fileID: 431934563250691456}
+  - component: {fileID: -5441496771412258010}
   m_Layer: 5
   m_Name: MusicInventorySlot
   m_TagString: Untagged
@@ -168,4 +203,31 @@ MonoBehaviour:
   musicItemSprite: {fileID: 0}
   isFull: 0
   emptySprite: {fileID: 21300000, guid: e27357a54b6c47648809736fccda560d, type: 3}
-  musicItemImage: {fileID: 2587507117847873579}
+  description: 
+  musicItemImage: {fileID: 0}
+  descriptionNameText: {fileID: 0}
+  descriptionDeText: {fileID: 0}
+--- !u!114 &-5441496771412258010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767529917286010144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2

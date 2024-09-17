@@ -4,49 +4,24 @@ using UnityEngine;
 
 public class RadioMenuManager : MonoBehaviour
 {
-    public GameObject radioMenu;
-    public Rigidbody2D rb; 
-    public GameObject player;
-    public GameObject prompt;
-    private bool menuActive;
+    public int numActiveSlots;
+    public RadioScheduleSlot[] radioScheduleSlots;
     // Start is called before the first frame update
-    void Start()
+ 
+
+    void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
-        menuActive = false;
-        radioMenu.SetActive(false);
-        prompt.SetActive(false);
+        for (int i = 0; i < radioScheduleSlots.Length; i++)
+        {
+            if (i < numActiveSlots) 
+            {
+                radioScheduleSlots[i].gameObject.SetActive(true);
+            } else {
+                radioScheduleSlots[i].gameObject.SetActive(false);
+            }
+        }    
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (rb.IsTouching(player.GetComponent<BoxCollider2D>())) {
-            
-            if(Input.GetButtonDown("Fire1") && menuActive) {
-                Debug.Log("deactivate menu");
-                radioMenu.SetActive(false);
-                menuActive = false;
-                prompt.SetActive(true);
-            }
-            else if(Input.GetButtonDown("Fire1") && !menuActive) {
-                Debug.Log("activate menu");
-                prompt.SetActive(false);
-                radioMenu.SetActive(true);
-                menuActive = true;
-            }
-        } else {
-            radioMenu.SetActive(false);
-            menuActive = false;
-            prompt.SetActive(false);
-        }
-    }
-
-    void OnTriggerEnter2D(Collider2D col) {
-        Debug.Log("collide");
-        if (col.gameObject.CompareTag("Player")) 
-        { 
-            prompt.SetActive(true);
-        }
-    }
+    
 }

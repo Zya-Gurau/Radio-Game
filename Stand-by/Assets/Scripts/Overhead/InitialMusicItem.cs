@@ -9,8 +9,13 @@ public class InitialMusicItem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MusicItem item = new MusicItem();
+        item.musicName = "Pop Disc";
+        item.genre = "Pop";
+        item.format = "CD";
+        item.sprite = sprite;
         inventory = GameObject.Find("Player").GetComponent<MusicInventoryManager>();
-        inventory.AddItem("Pop Disc", sprite);
+        inventory.AddItem(item);
     }
 
     // Update is called once per frame
